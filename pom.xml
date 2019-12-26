@@ -1,6 +1,6 @@
 <project>
-<modelversion>4.0</modelversion>
-<groupid>pipelineasacode</groupid>
-<artifactid>pipelineasacodeexample</artifactid>
+<modelVersion>4.0</modelVersion>
+<groupId>pipelineasacode</groupId>
+<artifactId>pipelineasacodeexample</artifactId>
 <version>1.0</version>
 </project>
