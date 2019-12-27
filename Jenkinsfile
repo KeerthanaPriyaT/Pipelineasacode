@@ -1,31 +1,22 @@
 pipeline {
     agent any
-
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
-        stage ('Compile Stage') {
-
+        stage('Build') {
             steps {
-                withMaven(maven : 'maven-3') {
-                    sh 'mvn clean compile'
-                }
+                echo 'Building'
             }
         }
-
-        stage ('Testing Stage') {
-
+        stage('Test') {
             steps {
-                withMaven(maven : 'maven-3') {
-                    sh 'mvn test'
-                }
+                echo 'Testing'
             }
         }
-
-
-        stage ('Deployment Stage') {
+        stage('Deploy') {
             steps {
-                withMaven(maven : 'maven-3') {
-                    sh 'mvn deploy'
-                }
+                echo 'Deploying'
             }
         }
     }
